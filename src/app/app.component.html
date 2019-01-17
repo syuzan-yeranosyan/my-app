@@ -1,0 +1,28 @@
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">title</th>
+      <th scope="col">url</th>
+      <th scope="col">created_at</th>
+      <th scope="col">author</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let element of data; let i = index" (click)="openModal(i)">
+      <td scope="row">{{element.title}}</td>
+      <td scope="row">{{element.url}}</td>
+      <td scope="row">{{element.created_at}}</td>
+      <td scope="row">{{element.author}}</td>
+    </tr>
+  </tbody>
+</table>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close"  (click)="closeModal()">&times;</span>
+    <p>{{showdata}}</p>
+  </div>
+
+</div>
